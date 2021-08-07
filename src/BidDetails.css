@@ -1,0 +1,31 @@
+.BidDetails {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+}
+.BidDetails_info {
+  width: 50%;
+  font-size: 20px;
+  text-align: left;
+}
+
+.BidDetails_info > small {
+  color: gray;
+  font-size: 12px;
+}
+
+.bid_price {
+  width: 50%;
+  text-align: right;
+}
+.bid_price > h1 {
+  color: black;
+  font-size: large;
+  font-weight: 600;
+}
+
+.bid_price > p {
+  color: gray;
+  font-size: small;
+}

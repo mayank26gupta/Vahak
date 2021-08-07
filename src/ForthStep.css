@@ -1,0 +1,36 @@
+.ForthStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ForthStep__stepHeader {
+  width: 100%;
+  height: 150px;
+  background: #08123b;
+  padding-top: 100px;
+}
+
+.ForthStep__stepHeader > h1 {
+  text-align: center;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 40px;
+  letter-spacing: 0.01px;
+}
+.ForthStep__Bid {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 485px;
+}
+.ForthStep__Bid > button {
+  width: 80%;
+  height: 40px;
+  margin: 30px 0px 20px 80px;
+  color: white;
+  background: #0f53fb;
+  border: none;
+  border-radius: 3px;
+}

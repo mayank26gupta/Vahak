@@ -1,0 +1,22 @@
+.JourneyDetails {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+}
+.JourneyDetails_info {
+  width: 50%;
+  font-size: 20px;
+  text-align: left;
+}
+
+.JourneyDetails_info > small {
+  color: gray;
+  font-size: 12px;
+}
+
+.edit {
+  width: 50%;
+  text-align: right;
+  color: #0f53fb;
+  text-decoration: none;
+}
