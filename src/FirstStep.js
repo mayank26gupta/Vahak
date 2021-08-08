@@ -8,7 +8,6 @@ function FirstStep(props) {
       <div className="firstStep__stepHeader">
         <h1>Place your Bid({props.step}/4 step)</h1>
       </div>
-      {/* Forms */}
       <div className="firstForm">
         <FirstForm />
       </div>

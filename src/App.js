@@ -20,6 +20,7 @@ function App() {
           <Route path="/third">
             <Header />
             <ThirdStep step={3} />
+            <h1>Hello</h1>
           </Route>
 
           <Route path="/second2">

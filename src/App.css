@@ -1,4 +1,9 @@
 * {
   font-family: sans-serif;
 }
-
+.errors {
+  position: absolute;
+  left: 15px;
+  color: red;
+  font-size: x-small;
+}

@@ -96,3 +96,11 @@
   border: none;
   border-radius: 3px;
 }
+
+.errors_mob {
+  position: absolute;
+  top: 127px !important;
+  left: 15px;
+  color: red;
+  font-size: x-small;
+}

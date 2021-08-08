@@ -2,6 +2,7 @@ import { useFormik } from "formik";
 import "./FirstForm.css";
 import { useStateValue } from "./StateProvider";
 import { useHistory } from "react-router";
+import * as Yup from "yup";
 
 function FirstForm() {
   const [state, dispatch] = useStateValue();
@@ -23,6 +24,21 @@ function FirstForm() {
 
       history.push("./second");
     },
+    validationSchema: Yup.object({
+      sourceLocation: Yup.string().required("Required"),
+      destination: Yup.string().required("Required"),
+      enterCarType: Yup.string().required("Required"),
+
+      numberOfTravellers: Yup.number().when("enterCarType", {
+        is: (enterCarType) => {
+          return enterCarType === "SUV" ? true : false;
+        },
+        then: Yup.number().max(6, "Max Pax 6 allowed").required("Required"),
+        otherwise: Yup.number()
+          .max(4, "Max Pax 4 allowed")
+          .required("Required"),
+      }),
+    }),
   });
 
   return (
@@ -33,10 +49,13 @@ function FirstForm() {
           name="sourceLocation"
           type="text"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           value={formik.values.sourceLocation}
-          required
         />
         <label htmlFor="sourceLocation">Source Location *</label>
+        {formik.touched.sourceLocation && formik.errors.sourceLocation ? (
+          <div className="errors">{formik.errors.sourceLocation}</div>
+        ) : null}
       </span>
       <span className="form__group">
         <input
@@ -44,15 +63,20 @@ function FirstForm() {
           name="destination"
           type="text"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           value={formik.values.destination}
         />
         <label htmlFor="destination">Destination *</label>
+        {formik.touched.destination && formik.errors.destination ? (
+          <div className="errors">{formik.errors.destination}</div>
+        ) : null}
       </span>
       <div className="form__group">
         <select
           name="enterCarType"
           id="enterCarType"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           value={formik.values.enterCarType}
         >
           <option value="" disabled selected hidden></option>
@@ -61,6 +85,9 @@ function FirstForm() {
           <option value="SUV">SUV</option>
         </select>
         <label htmlFor="enterCarType">Enter Car Type *</label>
+        {formik.touched.enterCarType && formik.errors.enterCarType ? (
+          <div className="errors">{formik.errors.enterCarType}</div>
+        ) : null}
       </div>
       <div className="form__group">
         <input
@@ -68,9 +95,14 @@ function FirstForm() {
           name="numberOfTravellers"
           type="text"
           onChange={formik.handleChange}
+          onBlur={formik.handleBlur}
           value={formik.values.numberOfTravellers}
         />
         <label htmlFor="numberOfTravellers">Number Of Travellers</label>
+        {formik.touched.numberOfTravellers &&
+        formik.errors.numberOfTravellers ? (
+          <div className="errors">{formik.errors.numberOfTravellers}</div>
+        ) : null}
       </div>
       <button type="submit">Enter Bid details</button>
     </form>

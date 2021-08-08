@@ -4,6 +4,8 @@ import { useStateValue } from "./StateProvider";
 import { useHistory } from "react-router";
 import "./PersonalDetails.css";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";
+import * as Yup from "yup";
+import "yup-phone";
 
 function PersonalDetails() {
   const [state, dispatch] = useStateValue();
@@ -28,6 +30,10 @@ function PersonalDetails() {
       });
       history.push("./third");
     },
+    validationSchema: Yup.object({
+      mobile: Yup.string().phone().required("Mobile Required"),
+      name: Yup.string().required("Required"),
+    }),
   });
 
   return (
@@ -59,9 +65,13 @@ function PersonalDetails() {
               name="mobile"
               type="tel"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               value={formik.values.mobile}
             />
             <label htmlFor="mobile">Enter your 10 digits Mobile number</label>
+            {formik.touched.mobile && formik.errors.mobile ? (
+              <div className="errors_mob">{formik.errors.mobile}</div>
+            ) : null}
           </div>
           <div className="whatsapp_update">
             <input id="whatsapp" type="checkbox"></input>
@@ -70,15 +80,20 @@ function PersonalDetails() {
               <span style={{ color: "#40C351" }}>Whatsapp</span>
             </label>
           </div>
+
           <div className="personal_details__formGroup">
             <input
               id="name"
               name="name"
               type="text"
               onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
               value={formik.values.name}
             />
             <label htmlFor="name">Enter your Name *</label>
+            {formik.touched.name && formik.errors.name ? (
+              <div className="errors">{formik.errors.name}</div>
+            ) : null}
           </div>
           <div className="personal_details__formGroup">
             <input

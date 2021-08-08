@@ -4,7 +4,8 @@ import { useStateValue } from "./StateProvider";
 import { useHistory } from "react-router";
 import "./Bid.css";
 
-function Bid() {
+function 
+Bid() {
   const [state, dispatch] = useStateValue();
   const { bid } = state;
   const history = useHistory();
