@@ -1,5 +1,5 @@
 import React from "react";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import EditIcon from "@material-ui/icons/Edit";
 import "./JourneyDetails.css";
 import { Link } from "react-router-dom";

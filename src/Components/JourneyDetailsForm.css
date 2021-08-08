@@ -1,4 +1,4 @@
-.firstStep_form {
+.JourneyDetailsForm_form {
   width: 100%;
   padding: 20px;
 }
@@ -46,7 +46,7 @@ div.form__group > label {
   color: #0d132d;
   font-size: small;
 }
-.firstStep_form > button {
+.JourneyDetailsForm_form > button {
   margin: 40px 20px 0px 20px;
   width: 95%;
   height: 40px;

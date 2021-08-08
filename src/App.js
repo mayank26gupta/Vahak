@@ -1,11 +1,11 @@
 import "./App.css";
-import FirstStep from "./FirstStep";
-import Header from "./Header";
-import SecondStep from "./SecondStep";
+import FirstStep from "./Pages/FirstStep";
+import Header from "./Components/Header";
+import SecondStep from "./Pages/SecondStep";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import SecondNext from "./SecondNext";
-import ThirdStep from "./ThirdStep";
-import ForthStep from "./ForthStep";
+import SecondNext from "./Pages/SecondNext";
+import ThirdStep from "./Pages/ThirdStep";
+import ForthStep from "./Pages/ForthStep";
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
           <Route path="/third">
             <Header />
             <ThirdStep step={3} />
-            <h1>Hello</h1>
           </Route>
 
           <Route path="/second2">

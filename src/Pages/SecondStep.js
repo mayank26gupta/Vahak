@@ -1,7 +1,7 @@
 import React from "react";
 import "./SecondStep.css";
-import JourneyDetails from "./JourneyDetails";
-import Bid from "./Bid";
+import JourneyDetails from "../Components/JourneyDetails";
+import Bid from "../Components/Bid";
 
 function SecondStep(props) {
   return (

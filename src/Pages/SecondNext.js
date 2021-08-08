@@ -1,7 +1,7 @@
 import React from "react";
 import "./SecondStep.css";
-import JourneyDetails from "./JourneyDetails";
-import PersonalDetails from "./PersonalDetails";
+import JourneyDetails from "../Components/JourneyDetails";
+import PersonalDetails from "../Components/PersonalDetails";
 
 function SecondNext(props) {
   return (

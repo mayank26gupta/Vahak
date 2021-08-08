@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import { useHistory } from "react-router";
 import "./PersonalDetails.css";
 import WhatsAppIcon from "@material-ui/icons/WhatsApp";

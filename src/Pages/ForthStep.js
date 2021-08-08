@@ -1,6 +1,6 @@
 import React from "react";
-import JourneyDetails from "./JourneyDetails";
-import BidDetails from "./BidDetails";
+import JourneyDetails from "../Components/JourneyDetails";
+import BidDetails from "../Components/BidDetails";
 import "./ForthStep.css";
 
 function ForthStep(props) {

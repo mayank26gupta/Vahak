@@ -1,5 +1,5 @@
 import React from "react";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import "./BidDetails.css";
 
 function BidDetails() {

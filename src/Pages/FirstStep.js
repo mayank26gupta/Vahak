@@ -1,6 +1,6 @@
 import React from "react";
 import "./FirstStep.css";
-import FirstForm from "./FirstForm";
+import JourneyDetailsForm from "../Components/JourneyDetailsForm";
 
 function FirstStep(props) {
   return (
@@ -8,8 +8,8 @@ function FirstStep(props) {
       <div className="firstStep__stepHeader">
         <h1>Place your Bid({props.step}/4 step)</h1>
       </div>
-      <div className="firstForm">
-        <FirstForm />
+      <div className="JourneyDetailsForm">
+        <JourneyDetailsForm />
       </div>
     </div>
   );

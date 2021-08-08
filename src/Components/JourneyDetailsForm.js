@@ -1,10 +1,10 @@
 import { useFormik } from "formik";
-import "./FirstForm.css";
-import { useStateValue } from "./StateProvider";
+import "./JourneyDetailsForm.css";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import { useHistory } from "react-router";
 import * as Yup from "yup";
 
-function FirstForm() {
+function JourneyDetailsForm() {
   const [state, dispatch] = useStateValue();
   const { details } = state;
   const history = useHistory();
@@ -42,7 +42,7 @@ function FirstForm() {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className="firstStep_form">
+    <form onSubmit={formik.handleSubmit} className="JourneyDetailsForm_form">
       <span className="form__group">
         <input
           id="sourceLocation"
@@ -109,4 +109,4 @@ function FirstForm() {
   );
 }
 
-export default FirstForm;
+export default JourneyDetailsForm;

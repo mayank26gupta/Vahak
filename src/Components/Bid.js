@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import { useHistory } from "react-router";
 import "./Bid.css";
 
-function 
-Bid() {
+function Bid() {
   const [state, dispatch] = useStateValue();
   const { bid } = state;
   const history = useHistory();

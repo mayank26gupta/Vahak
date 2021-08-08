@@ -1,11 +1,11 @@
 import React from "react";
-import JourneyDetails from "./JourneyDetails";
-import BidDetails from "./BidDetails";
+import JourneyDetails from "../Components/JourneyDetails";
+import BidDetails from "../Components/BidDetails";
 import "./ThirdStep.css";
-import { useStateValue } from "./StateProvider";
+import { useStateValue } from "../ContextAPI/StateProvider";
 import EditIcon from "@material-ui/icons/Edit";
 import { Link } from "react-router-dom";
-import OTP from "./OTP";
+import OTP from "../Components/OTP";
 
 function ThirdStep(props) {
   const [{ mobile }, dispatch] = useStateValue();
